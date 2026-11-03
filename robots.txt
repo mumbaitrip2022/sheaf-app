@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mumbaitrip2022.github.io/sheaf-app/sitemap.xml
