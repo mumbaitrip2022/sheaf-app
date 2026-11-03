@@ -10,13 +10,37 @@
   $$("[data-play]").forEach(el => io.observe(el));
   requestAnimationFrame(() => { const h = $(".hero .intro"); if (h) h.dataset.play = "on"; });
 
+  // Header: over the first 150 px of scroll the bar squeezes (gap 96 → 48 px) and turns into frosted glass.
+  const pill = $(".pill");
+  if (pill) {
+    let shown = 0, raf = 0;
+    const paint = k => {
+      const narrow = innerWidth <= 720;
+      pill.style.gap = narrow ? `${24 - 8 * k}px` : `${96 - 48 * k}px`;
+      pill.style.setProperty("--glass", k.toFixed(3));
+      pill.style.backgroundColor = `rgba(0,0,0,${(0.5 * k).toFixed(3)})`;
+      const f = `saturate(${100 + 80 * k}%) blur(${(16 * k).toFixed(2)}px)`;
+      pill.style.backdropFilter = f; pill.style.webkitBackdropFilter = f;
+      pill.style.boxShadow = `0 ${22 * k}px ${48 * k}px -18px rgba(0,0,0,${(0.75 * k).toFixed(3)}), 0 ${4 * k}px ${12 * k}px -6px rgba(0,0,0,${(0.6 * k).toFixed(3)})`;
+    };
+    const step = () => {
+      const target = Math.min(1, Math.max(0, scrollY / 150));
+      shown += (target - shown) * (reduce ? 1 : 0.6);
+      if (Math.abs(target - shown) < 0.002) shown = target;
+      paint(shown);
+      raf = shown === target ? 0 : requestAnimationFrame(step);
+    };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(step); };
+    addEventListener("scroll", kick, { passive: true }); addEventListener("resize", kick);
+    shown = Math.min(1, scrollY / 150); paint(shown);
+  }
+
   // Header becomes a glass pill after a little scroll; hero wall zooms slightly; collage assembles.
   const root = document.documentElement, cols = $(".cols"), beyond = $(".beyond"), collage = $(".collage");
   let ticking = false;
   function onScroll() {
     ticking = false;
     const y = scrollY;
-    root.classList.toggle("scrolled", y > 24);
     if (cols && !reduce) cols.style.setProperty("--camera", (1 + Math.min(y, 900) / 900 * 0.08).toFixed(4));
     if (beyond && collage) {
       const r = beyond.getBoundingClientRect(), span = r.height - innerHeight;
