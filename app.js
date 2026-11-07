@@ -95,6 +95,59 @@
     fit(); update();
   }
 
+  // "Why people leave": both lanes run on one clock (8× real time) when the race scrolls into view.
+  const race = $("[data-race]");
+  if (race) {
+    const total = +race.dataset.total, speed = 8, lanes = $$(".rc-lane", race).map(l => ({
+      el: l, segs: $$(".rc-seg", l).map(s => ({ s, a: +s.dataset.a, b: +s.dataset.b })), time: $(".rc-time", l), say: $(".rc-say", l),
+      steps: $(".rc-say", l).dataset.steps.split("|").map(x => { const i = x.indexOf(":"); return [+x.slice(0, i), x.slice(i + 1)]; }),
+      end: +$(".rc-time", l).dataset.end, done: $(".rc-say", l).dataset.done, key: l.classList.contains("me") ? "me-done" : "web-done",
+    }));
+    let t0 = 0, raf = 0;
+    const fmt = t => t < 10 ? `${t.toFixed(1)} s` : `${Math.round(t)} s`;
+    const paint = t => lanes.forEach(L => {
+      L.segs.forEach(({ s, a, b }) => s.style.setProperty("--k", Math.min(1, Math.max(0, (t - a) / (b - a))).toFixed(4)));
+      const tt = Math.min(t, L.end), fin = t >= L.end;
+      L.time.textContent = fmt(tt);
+      race.classList.toggle(L.key, fin);
+      if (fin) L.say.textContent = L.done;
+      else { const st = L.steps.filter(([a]) => a <= t).pop(); const up = L.segs[0];
+        L.say.textContent = st[1] + (L.key === "web-done" && t < up.b ? `… ${Math.floor(t / up.b * 100)}%` : "…"); }
+    });
+    const tick = now => { const t = (now - t0) / 1000 * speed; paint(Math.min(t, total)); raf = t < total ? requestAnimationFrame(tick) : 0; };
+    const run = () => { cancelAnimationFrame(raf); if (reduce) { paint(total); return; } t0 = performance.now(); raf = requestAnimationFrame(tick); };
+    paint(0); lanes.forEach(L => L.say.textContent = "Ready");
+    const seen = new IntersectionObserver(([e]) => { if (e.isIntersecting) { run(); seen.disconnect(); } }, { threshold: .5 });
+    seen.observe(race);
+    $(".rc-again", race).addEventListener("click", run);
+  }
+
+  // Hero: the quoted search phrase rolls through what Sheaf does, letter by letter.
+  const win = $(".roll-win");
+  if (win && !reduce) {
+    const words = JSON.parse(win.dataset.words);
+    let i = 0, timer = 0, cur = $(".roll-w", win);
+    const make = w => { const el = document.createElement("span"); el.className = "roll-w";
+      [...w].forEach((c, k) => { const s = document.createElement("span"); s.className = "ch"; s.style.setProperty("--k", k); s.textContent = c; el.append(s); }); return el; };
+    const widthOf = el => { el.style.visibility = "hidden"; win.append(el); const w = el.getBoundingClientRect().width; el.remove(); el.style.visibility = ""; return w; };
+    // Swap the plain first word for split letters, and pin the window to its width.
+    const first = make(words[0][0]); win.style.width = widthOf(first) + "px"; cur.replaceWith(first); cur = first;
+    const next = () => {
+      i = (i + 1) % words.length;
+      const [w, c] = words[i], el = make(w), old = cur;
+      const wNew = widthOf(el);
+      old.classList.remove("in"); old.classList.add("out");
+      setTimeout(() => old.remove(), 900);
+      win.style.setProperty("--c", c);
+      win.style.width = wNew + "px";
+      el.classList.add("in"); win.append(el); cur = el;
+    };
+    const start = () => { if (!timer) timer = setInterval(next, 2300); }, stop = () => { clearInterval(timer); timer = 0; };
+    new IntersectionObserver(([e]) => e.isIntersecting && !document.hidden ? start() : stop()).observe(win);
+    document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+    addEventListener("resize", () => { win.style.width = widthOf(make(words[i][0])) + "px"; });
+  }
+
   // FAQ: one smooth accordion.
   $$(".frow").forEach(row => {
     const b = $(".trig", row);
