@@ -1,4 +1,4 @@
-// Sheaf site motion: reveals, header glass, hero camera, action carousel, pinned collage, FAQ, wordmark.
+// Sheaf site motion: reveals, header glass, hero camera, action story, pinned collage, FAQ, wordmark.
 (() => {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -35,13 +35,13 @@
     shown = Math.min(1, scrollY / 150); paint(shown);
   }
 
-  // Header becomes a glass pill after a little scroll; hero wall zooms slightly; collage assembles.
-  const root = document.documentElement, cols = $(".cols"), beyond = $(".beyond"), collage = $(".collage");
+  // Header becomes a glass pill after a little scroll; the hero demo leans in slightly; collage assembles.
+  const root = document.documentElement, cols = $(".demo .dm-frame"), beyond = $(".beyond"), collage = $(".collage");
   let ticking = false;
   function onScroll() {
     ticking = false;
     const y = scrollY;
-    if (cols && !reduce) cols.style.setProperty("--camera", (1 + Math.min(y, 900) / 900 * 0.08).toFixed(4));
+    if (cols && !reduce) cols.style.setProperty("--camera", (1 + Math.min(y, 700) / 700 * 0.035).toFixed(4));
     if (beyond && collage) {
       const r = beyond.getBoundingClientRect(), span = r.height - innerHeight;
       const p = span > 0 ? Math.min(1, Math.max(0, -r.top / span * 1.25 + 0.05)) : 1;
@@ -51,29 +51,48 @@
   addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
 
-  // Action carousel: cards on a shallow arc, the front one plays; advances every 3 s.
-  const cards = $$(".wheel .card"), caps = $$(".captions .caption"), n = cards.length;
-  if (n) {
-    let active = 0, timer = 0, visible = false;
-    function layout() {
-      const wide = innerWidth > 900;
-      cards.forEach((c, i) => {
-        let off = ((i - active) % n + n) % n; if (off > n / 2) off -= n;
-        const a = Math.abs(off);
-        const x = off * (wide ? 250 : 120), z = -a * (wide ? 170 : 120), ry = -off * 24, s = 1 - a * 0.06;
-        c.style.transform = `translateX(${x}px) translateZ(${z}px) rotateY(${ry}deg) scale(${s})`;
-        c.style.zIndex = 10 - a;
-        c.style.opacity = a > 2 ? 0 : 1 - a * 0.12;
-        c.style.filter = a ? `brightness(${1 - a * 0.22})` : "none";
-        c.classList.toggle("front", off === 0 && visible);
-      });
-      caps.forEach((c, i) => c.classList.toggle("on", i === active && visible));
-    }
-    const go = i => { active = (i + n) % n; layout(); restart(); };
-    const restart = () => { clearInterval(timer); if (!reduce && visible) timer = setInterval(() => go(active + 1), 3000); };
-    cards.forEach((c, i) => c.addEventListener("click", () => go(i)));
-    new IntersectionObserver(([e]) => { visible = e.isIntersecting; layout(); restart(); }, { threshold: 0.35 }).observe($(".stage"));
-    addEventListener("resize", layout); layout();
+  // "Choose what happens": scrolling through the pinned section steps through the five actions.
+  const ax = $(".ax-track");
+  if (ax) {
+    const btns = $$(".ax-list button", ax), scenes = $$(".sc", ax), panel = $(".ax-panel", ax), canvas = $(".ax-canvas", ax), now = $(".ax-now", ax);
+    const tints = panel.dataset.tints.split(","), n = scenes.length;
+    let active = -1, raf = 0;
+    const fit = () => canvas.style.setProperty("--s", (panel.clientWidth / 640).toFixed(4));
+    // Sizes count down on their own clock once a scene starts.
+    const count = sc => $$("[data-from]", sc).forEach(el => {
+      const a = +el.dataset.from, b = +el.dataset.to, at = +el.dataset.at * 1000, dur = 1300, t0 = performance.now();
+      if (reduce) { el.textContent = b.toFixed(1); return; }
+      el.textContent = a.toFixed(1);
+      const tick = t => {
+        if (!sc.classList.contains("on")) return;
+        const k = Math.min(1, Math.max(0, (t - t0 - at) / dur)), e = k < .5 ? 4 * k * k * k : 1 - (-2 * k + 2) ** 3 / 2;
+        el.textContent = (a + (b - a) * e).toFixed(1);
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+    const show = i => {
+      if (i === active) return;
+      active = i;
+      scenes.forEach((s, k) => { s.classList.toggle("on", k === i); s.setAttribute("aria-hidden", k !== i); });
+      btns.forEach((b, k) => { b.classList.toggle("on", k === i); b.setAttribute("aria-current", k === i ? "step" : "false"); });
+      panel.style.setProperty("--tint", tints[i]);
+      if (now) now.textContent = $(".ax-desc span", btns[i]).textContent;
+      count(scenes[i]);
+      const list = btns[i].closest("ol"); if (list.scrollWidth > list.clientWidth) list.scrollTo({ left: btns[i].parentElement.offsetLeft - 24, behavior: "smooth" });
+    };
+    const span = () => ax.offsetHeight - innerHeight;
+    const update = () => {
+      raf = 0;
+      const p = Math.min(.9999, Math.max(0, -ax.getBoundingClientRect().top / span())), f = p * n, i = Math.floor(f);
+      show(i);
+      btns.forEach((b, k) => b.style.setProperty("--q", k < i ? 1 : k > i ? 0 : (f - i).toFixed(3)));
+    };
+    const top = () => ax.getBoundingClientRect().top + scrollY;
+    btns.forEach((b, k) => b.addEventListener("click", () => scrollTo({ top: top() + span() * (k + .08) / n, behavior: reduce ? "auto" : "smooth" })));
+    addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(update); }, { passive: true });
+    addEventListener("resize", () => { fit(); update(); });
+    fit(); update();
   }
 
   // FAQ: one smooth accordion.
@@ -117,4 +136,76 @@
     new IntersectionObserver(([e]) => { on = e.isIntersecting; if (on && !raf) raf = requestAnimationFrame(frame); }).observe(cv);
     addEventListener("resize", build); build(); frame(0);
   }
+})();
+
+// Hero demo: drag three PDFs out of Finder, pause, the circle opens, aim at Compress, pick Smallest, drop.
+// Positions are in the 1040×650 screen; the bloom images are Sheaf's real interface.
+(() => {
+  const demo = document.querySelector("[data-demo]");
+  if (!demo) return;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const vp = demo.querySelector(".dm-viewport"), screen = demo.querySelector(".dm-screen");
+  const cursor = demo.querySelector(".dm-cursor"), ghost = demo.querySelector(".dm-ghost"), seed = demo.querySelector(".dm-seed");
+  const bloom = demo.querySelector(".bloomer"), steps = [...demo.querySelectorAll(".dm-steps li")];
+  const W = 1040, H = 650, FOCUS = 690;  // on narrow screens, keep the circle in view
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const LOOP = 9600;
+  const FILE = [323, 190], MID = [690, 360], COMPRESS = [785, 277], SMALLEST = [885, 237];
+  // [time ms, x, y]: where the pointer is, eased between stops.
+  const path = [[0, ...FILE], [550, ...FILE], [1750, ...MID], [2950, ...MID], [3550, ...COMPRESS], [4000, ...COMPRESS], [4500, ...SMALLEST], [8300, ...SMALLEST], [9200, ...FILE], [LOOP, ...FILE]];
+  const at = t => {
+    let i = 0; while (i < path.length - 2 && t >= path[i + 1][0]) i++;
+    const [t0, x0, y0] = path[i], [t1, x1, y1] = path[i + 1];
+    const k = ease(Math.min(1, Math.max(0, (t - t0) / (t1 - t0 || 1))));
+    return [x0 + (x1 - x0) * k, y0 + (y1 - y0) * k];
+  };
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const set = (el, k, v) => el.style.setProperty(k, v);
+
+  function fit() {
+    const w = vp.clientWidth, narrow = w < 700;
+    const s = narrow ? w / 700 : w / W;
+    set(demo, "--s", s.toFixed(4));
+    set(screen, "--s", s.toFixed(4));
+    set(screen, "--shift", narrow ? Math.min(0, w / 2 - FOCUS * s).toFixed(1) + "px" : "0px");
+    vp.style.height = (H * s).toFixed(1) + "px";
+  }
+  fit(); addEventListener("resize", fit);
+
+  function paint(t) {
+    const [x, y] = at(t);
+    set(cursor, "--cx", x + "px"); set(cursor, "--cy", y + "px");
+    const pressed = t > 350 && t < 4700;
+    set(cursor, "--cs", pressed ? .9 : 1);
+    // The drag image rides under the pointer until the drop.
+    const g = t < 450 ? 0 : t < 4700 ? Math.min(1, (t - 450) / 150) : Math.max(0, 1 - (t - 4700) / 120);
+    ghost.style.opacity = g; set(ghost, "--gx", (x - 30) + "px"); set(ghost, "--gy", (y - 20) + "px");
+    // Slowing down: the tag beside the pointer fills its ring, then the circle opens.
+    const seedOn = t > 1650 && t < 2300;
+    seed.style.opacity = seedOn ? 1 : 0; set(seed, "--ss", seedOn ? 1 : .9);
+    set(seed, "--ring", clamp((t - 1800) / 450).toFixed(3));
+    set(seed, "--sx", (x + 22) + "px"); set(seed, "--sy", (y - 50) + "px");
+    const open = t >= 2250 && t < 8700;
+    bloom.style.opacity = open ? (t > 8300 ? Math.max(0, 1 - (t - 8300) / 400) : 1) : 0;
+    const pop = clamp((t - 2250) / 340);
+    set(bloom, "--bs", (open ? .9 + .1 * (1 - Math.pow(1 - pop, 3)) + Math.sin(pop * Math.PI) * .018 : .9).toFixed(4));
+    bloom.dataset.k = t < 3480 ? "bloom" : t < 4380 ? "bloom-aim" : t < 4750 ? "bloom-option" : t < 5650 ? "bloom-running" : "bloom-result";
+    // Steps under the screen follow along.
+    const bounds = [[0, 1750], [1750, 3480], [3480, 8700]];
+    const active = t < 1750 ? 0 : t < 3480 ? 1 : t < 8700 ? 2 : -1;
+    steps.forEach((li, i) => {
+      li.classList.toggle("on", i === active);
+      const [a, b] = bounds[i]; set(li, "--p", clamp((t - a) / (b - a)).toFixed(3));
+    });
+  }
+
+  const frozen = new URLSearchParams(location.search).get("demo-t");  // for reviewing one moment
+  if (reduce || frozen) { demo.classList.add("still"); paint(frozen ? +frozen : 4500); return; }
+  let start = 0, raf = 0, visible = false, offset = 0;
+  const tick = now => { if (!start) start = now - offset; paint((now - start) % LOOP); raf = requestAnimationFrame(tick); };
+  const play = () => { if (!raf && visible && !document.hidden) { start = 0; raf = requestAnimationFrame(tick); } };
+  const stop = () => { if (raf) { cancelAnimationFrame(raf); raf = 0; offset = (performance.now() - start) % LOOP; } };
+  paint(0);
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; visible ? play() : stop(); }, { threshold: .25 }).observe(demo);
+  document.addEventListener("visibilitychange", () => document.hidden ? stop() : play());
 })();
