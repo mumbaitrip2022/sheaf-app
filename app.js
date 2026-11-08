@@ -200,7 +200,8 @@
   const vp = demo.querySelector(".dm-viewport"), screen = demo.querySelector(".dm-screen");
   const cursor = demo.querySelector(".dm-cursor"), ghost = demo.querySelector(".dm-ghost"), seed = demo.querySelector(".dm-seed");
   const bloom = demo.querySelector(".bloomer"), steps = [...demo.querySelectorAll(".dm-steps li")];
-  const W = 1040, H = 650, FOCUS = 690;  // on narrow screens, keep the circle in view
+  // On phones the screen is shown larger and the view follows the pointer, then holds on the circle.
+  const W = 1040, H = 650, FOCUS = 690, VIEW = 600;
   const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   const LOOP = 9600;
   const FILE = [323, 190], MID = [690, 360], COMPRESS = [785, 277], SMALLEST = [885, 237];
@@ -215,19 +216,26 @@
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
   const set = (el, k, v) => el.style.setProperty(k, v);
 
+  let vw = 0, vs = 1, narrow = false, lastX = FOCUS;
+  const pan = x => {
+    if (!narrow) return set(screen, "--shift", "0px");
+    const c = Math.min(x, FOCUS);
+    set(screen, "--shift", clamp(vw / 2 - c * vs, vw - W * vs, 0).toFixed(1) + "px");
+  };
   function fit() {
-    const w = vp.clientWidth, narrow = w < 700;
-    const s = narrow ? w / 700 : w / W;
-    set(demo, "--s", s.toFixed(4));
-    set(screen, "--s", s.toFixed(4));
-    set(screen, "--shift", narrow ? Math.min(0, w / 2 - FOCUS * s).toFixed(1) + "px" : "0px");
-    vp.style.height = (H * s).toFixed(1) + "px";
+    vw = vp.clientWidth; narrow = vw < 700;
+    vs = narrow ? vw / VIEW : vw / W;
+    set(demo, "--s", vs.toFixed(4));
+    set(screen, "--s", vs.toFixed(4));
+    vp.style.height = (H * vs).toFixed(1) + "px";
+    pan(lastX);
   }
   fit(); addEventListener("resize", fit);
 
   function paint(t) {
     const [x, y] = at(t);
     set(cursor, "--cx", x + "px"); set(cursor, "--cy", y + "px");
+    lastX = x; pan(x);
     const pressed = t > 350 && t < 4700;
     set(cursor, "--cs", pressed ? .9 : 1);
     // The drag image rides under the pointer until the drop.
