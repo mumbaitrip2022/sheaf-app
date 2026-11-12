@@ -38,17 +38,17 @@ Key facts:
 - Managed settings: IT can set defaults, hide actions and lock settings with any MDM. Deploy through Apple Business Manager.
 
 ## Pages
-- [All features](https://sheafai.app/features.html): full feature list and comparison with Preview and online PDF sites
-- [Law firms](https://sheafai.app/pdf-software-for-law-firms-mac.html): Bates numbering, redaction, metadata removal, court-ready PDFs
-- [Accountants and finance](https://sheafai.app/pdf-software-for-accountants-mac.html): bank statements to Excel, unlocking client statements, certified copies with UDIN, portal upload sizes
-- [HR and payroll](https://sheafai.app/pdf-tools-for-hr-payroll-mac.html): payslips, ID redaction, forms
-- [Real estate](https://sheafai.app/pdf-tools-for-real-estate-mac.html): sign, merge, photos to PDF, email size
-- [Healthcare offices](https://sheafai.app/pdf-tools-for-healthcare-office-mac.html): redacting patient identifiers, searchable scans
-- [Sheaf for Business / IT](https://sheafai.app/business.html): Apple Business Manager, MDM managed settings
-- [Bank statement PDF to Excel on Mac](https://sheafai.app/bank-statement-pdf-to-excel-mac.html)
-- [Open a password-protected PDF on Mac](https://sheafai.app/unlock-password-protected-pdf-mac.html): common password formats by country
-- [Bates numbering on Mac](https://sheafai.app/bates-numbering-mac.html)
-- [Certified true copy wording by country](https://sheafai.app/certified-true-copy-pdf.html)
-- [PDF size limits for government portals](https://sheafai.app/pdf-size-limits-government-portals.html): IRS, USCIS, ATO, myGov, Income Tax, GST, CRA
-- [Compress a PDF on Mac](https://sheafai.app/compress-pdf-mac.html), [Merge](https://sheafai.app/merge-pdf-mac.html), [Sign](https://sheafai.app/sign-pdf-mac.html), [Redact](https://sheafai.app/redact-pdf-mac.html)
-- [Support](https://sheafai.app/support.html), [Privacy policy](https://sheafai.app/privacy.html)
+- [All features](https://sheafai.app/features): full feature list and comparison with Preview and online PDF sites
+- [Law firms](https://sheafai.app/pdf-software-for-law-firms-mac): Bates numbering, redaction, metadata removal, court-ready PDFs
+- [Accountants and finance](https://sheafai.app/pdf-software-for-accountants-mac): bank statements to Excel, unlocking client statements, certified copies with UDIN, portal upload sizes
+- [HR and payroll](https://sheafai.app/pdf-tools-for-hr-payroll-mac): payslips, ID redaction, forms
+- [Real estate](https://sheafai.app/pdf-tools-for-real-estate-mac): sign, merge, photos to PDF, email size
+- [Healthcare offices](https://sheafai.app/pdf-tools-for-healthcare-office-mac): redacting patient identifiers, searchable scans
+- [Sheaf for Business / IT](https://sheafai.app/business): Apple Business Manager, MDM managed settings
+- [Bank statement PDF to Excel on Mac](https://sheafai.app/bank-statement-pdf-to-excel-mac)
+- [Open a password-protected PDF on Mac](https://sheafai.app/unlock-password-protected-pdf-mac): common password formats by country
+- [Bates numbering on Mac](https://sheafai.app/bates-numbering-mac)
+- [Certified true copy wording by country](https://sheafai.app/certified-true-copy-pdf)
+- [PDF size limits for government portals](https://sheafai.app/pdf-size-limits-government-portals): IRS, USCIS, ATO, myGov, Income Tax, GST, CRA
+- [Compress a PDF on Mac](https://sheafai.app/compress-pdf-mac), [Merge](https://sheafai.app/merge-pdf-mac), [Sign](https://sheafai.app/sign-pdf-mac), [Redact](https://sheafai.app/redact-pdf-mac)
+- [Support](https://sheafai.app/support), [Privacy policy](https://sheafai.app/privacy)
