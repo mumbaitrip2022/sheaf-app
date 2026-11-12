@@ -550,3 +550,7 @@ button { font: inherit; color: inherit; }
 .article .feat { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: .75rem; margin-top: 1rem; }
 .article .feat .card { margin: 0; }
 .article .feat b { display: block; margin-bottom: .3rem; }
+/* language switcher in the footer */
+.langs { display: flex; flex-wrap: wrap; gap: .4rem 1rem; }
+.langs a { font-size: .8125rem; color: rgba(255,255,255,.5); text-decoration: none; }
+.langs a:hover, .langs a[aria-current] { color: #fff; }
