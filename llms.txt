@@ -52,3 +52,112 @@ Key facts:
 - [PDF size limits for government portals](https://sheafai.app/pdf-size-limits-government-portals): IRS, USCIS, ATO, myGov, Income Tax, GST, CRA
 - [Compress a PDF on Mac](https://sheafai.app/compress-pdf-mac), [Merge](https://sheafai.app/merge-pdf-mac), [Sign](https://sheafai.app/sign-pdf-mac), [Redact](https://sheafai.app/redact-pdf-mac)
 - [Support](https://sheafai.app/support), [Privacy policy](https://sheafai.app/privacy)
+
+## All pages
+Every page also has a Markdown copy: send `Accept: text/markdown`, or open https://sheafai.app/md/<page>.md.
+
+### English
+- [Sheaf – Compress, Merge & Sign PDFs on Mac, Offline](https://sheafai.app/): Compress, merge, sign, redact and convert PDFs on your Mac in a second. 100% local: no uploads, no account, no subscription. Free 7-day trial.
+- [How to Add Page Numbers to a PDF on Mac](https://sheafai.app/add-page-numbers-pdf-mac): Add page numbers, headers and footers to PDFs on your Mac: “Page 1 of 9”, file name or date, any corner, skip the cover. Bates numbering too.
+- [Adobe Acrobat Alternative for Mac: No Subscription](https://sheafai.app/adobe-acrobat-alternative-mac): Need to compress, merge, sign and convert PDFs but not Acrobat’s subscription? Compare Acrobat, Preview and Sheaf on price and features.
+- [Bank Statement PDF to Excel on Mac, Checked Row by Row](https://sheafai.app/bank-statement-pdf-to-excel-mac): Convert bank and card statement PDFs to Excel or CSV on a Mac, every row checked against the balance. Offline, works with scans and locked PDFs.
+- [How to Add Bates Numbers to PDFs on Mac (Without Acrobat)](https://sheafai.app/bates-numbering-mac): Add Bates numbers across a whole production of PDFs on a Mac: prefix, start number, digits and position. Continues from your last production. Works offline.
+- [Best PDF Apps for Mac in 2026, Compared (Prices Checked)](https://sheafai.app/best-pdf-apps-for-mac): Sheaf, Preview, Adobe Acrobat, PDF Expert, PDFgear, UPDF, Smallpdf and iLovePDF compared: prices, subscriptions, offline use and who each suits.
+- [Sheaf for Business: PDF Tools for Legal, Finance & IT](https://sheafai.app/business): Bates numbering, watermarks, hidden-data removal and court-ready PDFs that never leave the Mac. Deploy with Apple Business Manager and configure with any MDM.
+- [Certified True Copy Wording by Country (UK, AU, US, India)](https://sheafai.app/certified-true-copy-pdf): Certified true copy wording for the UK, Australia, the US, Canada and India, who may certify, and how to stamp a PDF with signature and UDIN.
+- [PDF Too Large to Email on Mac? Get It Under 25 MB](https://sheafai.app/compress-pdf-for-email-mac): Gmail caps attachments at 25 MB and many mail servers allow less. Compress a PDF to fit on your Mac in one step, or split it into email-sized parts.
+- [How to Compress a PDF on Mac (Without Uploading It)](https://sheafai.app/compress-pdf-mac): Reduce PDF file size on a Mac in about a second, with sharp text. Compare Preview, online sites and Sheaf. Works offline, no upload.
+- [Sheaf Features – Every PDF Tool for Mac in One Drag](https://sheafai.app/features): Every Sheaf PDF tool for Mac: compress, merge, OCR, sign, redact, PDF to Excel, Bates numbers, certified copies and more. No uploads.
+- [How to Fill Out a PDF Form on Mac (and Lock the Answers)](https://sheafai.app/fill-pdf-form-mac): Type into PDF forms on your Mac, then save a copy with the answers locked into the page so they can’t be changed. Sign it after. Offline.
+- [How to Convert HEIC to JPG on Mac (Batch, Offline)](https://sheafai.app/heic-to-jpg-mac): Convert iPhone HEIC photos to JPEG or PNG on your Mac, many at once, so they open on Windows, websites and forms. Also to AVIF. No upload.
+- [iLovePDF Alternative for Mac: No Limits, No Upload](https://sheafai.app/ilovepdf-alternative-mac): Compress, merge, split and convert PDFs on your Mac without iLovePDF’s free-plan task limits or uploading. Compare iLovePDF and Sheaf.
+- [How to Convert JPG to PDF on Mac (Photos and Scans)](https://sheafai.app/jpg-to-pdf-mac): Turn photos, scans and screenshots into one PDF on your Mac: JPEG, PNG and HEIC, in the order you choose. Works from Finder and Photos. No upload.
+- [How to Merge PDF Files on Mac (Combine PDFs in Seconds)](https://sheafai.app/merge-pdf-mac): Combine PDFs and images into one PDF on your Mac, in Finder order, with a bookmark for each file. Works offline, no upload, originals untouched.
+- [How to OCR a PDF on Mac: Make Scans Searchable](https://sheafai.app/ocr-pdf-mac): Turn scanned PDFs into searchable, selectable text on your Mac with on-device OCR. Search, copy and highlight scans. Nothing is uploaded.
+- [How to Rearrange, Delete and Rotate PDF Pages on Mac](https://sheafai.app/organize-pdf-pages-mac): Reorder, delete and rotate pages across several PDFs on your Mac, then save one clean file. Drag-and-drop page grid. Offline, no upload.
+- [How to Password Protect a PDF on Mac](https://sheafai.app/password-protect-pdf-mac): Add a password to a PDF on your Mac so only people you tell can open it. Saved as an encrypted copy. Works offline, no upload.
+- [PDF Size Limits: IRS, USCIS, ATO, Income Tax & GST Portals](https://sheafai.app/pdf-size-limits-government-portals): File size limits for government upload portals in the US, Australia, India, Canada and the UK, and how to compress a PDF under the limit on a Mac.
+- [PDF Software for Accountants on Mac: Statements to Excel](https://sheafai.app/pdf-software-for-accountants-mac): For CPAs, chartered accountants and finance teams: statements to Excel checked against the balance, unlock client PDFs, certified copies, portal sizes.
+- [PDF Software for Law Firms on Mac: Bates, Redaction](https://sheafai.app/pdf-software-for-law-firms-mac): Bates numbering, real redaction, metadata removal and court-ready PDFs for lawyers and paralegals on Mac. Files never leave the Mac.
+- [How to Convert PDF to JPG on Mac (Every Page at Once)](https://sheafai.app/pdf-to-jpg-mac): Save every page of a PDF as a JPEG or PNG image on your Mac in one step. No upload. Pages are named in order, ready to post or share.
+- [How to Convert PDF to Word on Mac (Offline)](https://sheafai.app/pdf-to-word-mac): Turn a PDF into an editable Word document on your Mac, scans included. No upload, no account. Text and basic styling come across.
+- [PDF Tools for Clinics on Mac: Redact Patient Data](https://sheafai.app/pdf-tools-for-healthcare-office-mac): Redact medical record numbers and dates of birth, make scanned referrals searchable and protect files, on the Mac with no uploads.
+- [PDF Tools for Home Paperwork on Mac: Taxes, Leases, Forms](https://sheafai.app/pdf-tools-for-home-paperwork-mac): Taxes, leases, insurance claims, school and visa forms: scan, merge, sign, compress for upload and protect, all on your family Mac.
+- [PDF Tools for HR & Payroll on Mac: Payslips, Forms](https://sheafai.app/pdf-tools-for-hr-payroll-mac): Unlock payslips, password-protect pay documents, redact Social Security and National Insurance numbers and fill onboarding forms on Mac. No uploads.
+- [PDF Tools for Job Seekers on Mac: Résumé, Applications](https://sheafai.app/pdf-tools-for-job-seekers-mac): Résumé to PDF, one application file, under upload limits, signed offer letters, and no hidden author data. All on your Mac, nothing uploaded.
+- [PDF Tools for Real Estate Agents on Mac](https://sheafai.app/pdf-tools-for-real-estate-mac): Sign offers, fill contracts, merge disclosure packs, convert iPhone photos to PDF and compress files to email, on your Mac.
+- [PDF Tools for Small Business on Mac: Invoices, Contracts](https://sheafai.app/pdf-tools-for-small-business-mac): Sign contracts, merge invoices and receipts, turn bank statements into Excel, watermark quotes and automate folders. One-time purchase.
+- [PDF Tools for Students on Mac: Compress, Merge, Scan to PDF](https://sheafai.app/pdf-tools-for-students-mac): The PDF jobs of college and school on a Mac: get assignments under upload limits, combine scans, make readings searchable, convert essays.
+- [PDF Tools for Teachers on Mac: Worksheets, Handouts, Privacy](https://sheafai.app/pdf-tools-for-teachers-mac): Combine worksheets, number handout packs, make old scans searchable, redact student names and email files to parents, on your Mac. No uploads.
+- [PDF Tools for Mac: Compress, Merge, Sign, Convert Offline](https://sheafai.app/pdf-tools-mac): Every PDF tool for Mac in one app: compress, merge, split, sign, redact, OCR, convert, page numbers and more. Runs on your Mac, no upload.
+- [Sheaf – Privacy Policy](https://sheafai.app/privacy): Sheaf’s privacy policy: your files never leave your Mac. No account, no tracking, no data collected.
+- [How to Redact a PDF on Mac (Permanently Remove Text)](https://sheafai.app/redact-pdf-mac): Permanently remove names, emails, phone, card and account numbers from a PDF on your Mac. Real redaction that deletes the text, not a black box.
+- [How to Remove Metadata and Hidden Data from a PDF on Mac](https://sheafai.app/remove-pdf-metadata-mac): Remove author name, edit history, comments, attachments, scripts and hidden layers from a PDF on your Mac before sharing. Pages look the same.
+- [How to Rotate and Straighten PDF Pages on Mac](https://sheafai.app/rotate-pdf-mac): Rotate sideways pages and straighten crooked scans in a PDF on your Mac, then save. Saves a fixed copy. Offline, no upload.
+- [How to Sign a PDF on Mac (No Account, No Upload)](https://sheafai.app/sign-pdf-mac): Sign PDFs on your Mac in seconds: draw your signature once, then place it on the first, last or every page. Your signature stays on your Mac.
+- [Smallpdf Alternative for Mac That Works Offline](https://sheafai.app/smallpdf-alternative-mac): Do Smallpdf’s jobs (compress, merge, split, sign, convert) on your Mac without uploading files or a subscription. Compare Smallpdf and Sheaf.
+- [How to Split a PDF on Mac: by Page, Range or Size](https://sheafai.app/split-pdf-mac): Split a PDF into single pages, page ranges or email-sized parts on your Mac. Fast, offline, and the original stays untouched.
+- [Sheaf – Support](https://sheafai.app/support): Help with Sheaf: how to use it, folder access, the free trial, restoring purchases and contact.
+- [Open a Password-Protected PDF on Mac (Statements, Payslips)](https://sheafai.app/unlock-password-protected-pdf-mac): Open locked bank statements, payslips and tax PDFs on a Mac and save an unlocked copy. Password formats for India, the UK, the US and Singapore.
+- [How to Add a Watermark to a PDF on Mac](https://sheafai.app/watermark-pdf-mac): Add a text watermark like Draft, Confidential or your own words to every page of a PDF on your Mac. Drawn into the page so it prints. Offline.
+- [How to Convert Word to PDF on Mac (DOCX, RTF, Text, HTML)](https://sheafai.app/word-to-pdf-mac): Turn Word documents, RTF, OpenDocument, text, Markdown and web pages into PDFs on your Mac in one drag, several at a time. No Word needed.
+
+### de
+- [Sheaf – PDF komprimieren, zusammenfügen & signieren am Mac](https://sheafai.app/de/): PDFs am Mac komprimieren, zusammenfügen, teilen, unterschreiben, schwärzen und umwandeln – direkt beim Ziehen. Alles bleibt auf dem Mac. 7 Tage kostenlos.
+- [PDF komprimieren auf dem Mac – ohne Upload, in einer Sekunde](https://sheafai.app/de/pdf-komprimieren-mac): PDF am Mac verkleinern: in etwa einer Sekunde, Text bleibt scharf. Vorschau, Online-Seiten und Sheaf im Vergleich. Offline, ohne Upload.
+- [PDF unterschreiben am Mac – ohne Drucken, ohne Konto](https://sheafai.app/de/pdf-unterschreiben-mac): PDFs am Mac in Sekunden unterschreiben: Unterschrift einmal zeichnen und auf jeder Seite platzieren. Sie bleibt nur auf deinem Mac.
+- [PDFs zusammenfügen auf dem Mac – in Sekunden, offline](https://sheafai.app/de/pdf-zusammenfuegen-mac): Mehrere PDFs und Bilder am Mac zu einem PDF zusammenfügen, in Finder-Reihenfolge, mit Lesezeichen. Offline, ohne Upload, Originale bleiben.
+
+### es
+- [Sheaf – Comprimir, unir y firmar PDF en Mac](https://sheafai.app/es/): Comprime, une, divide, firma, censura y convierte PDF en tu Mac, justo donde los arrastras. Todo se queda en el Mac. Prueba gratis de 7 días.
+- [Comprimir PDF en Mac – sin subirlo, en un segundo](https://sheafai.app/es/comprimir-pdf-mac): Reduce el tamaño de un PDF en Mac en un segundo con el texto nítido. Vista Previa, webs en línea y Sheaf comparados. Sin conexión, sin subir nada.
+- [Firmar un PDF en Mac – sin imprimir y sin cuenta](https://sheafai.app/es/firmar-pdf-mac): Firma PDF en tu Mac en segundos: dibuja tu firma una vez y colócala en cualquier página. Tu firma se queda en tu Mac.
+- [Unir PDF en Mac – en segundos y sin conexión](https://sheafai.app/es/unir-pdf-mac): Combina varios PDF e imágenes en un solo PDF en tu Mac, en el orden del Finder y con un marcador por archivo. Sin conexión, originales intactos.
+
+### fr
+- [Sheaf – Compresser, fusionner et signer des PDF sur Mac](https://sheafai.app/fr/): Compressez, fusionnez, divisez, signez, caviardez et convertissez vos PDF sur Mac, là où vous les faites glisser. Tout reste sur le Mac. Essai gratuit 7 jours.
+- [Compresser un PDF sur Mac – sans envoi, en une seconde](https://sheafai.app/fr/compresser-pdf-mac): Réduisez la taille d’un PDF sur Mac en une seconde environ, texte net. Aperçu, sites en ligne et Sheaf comparés. Hors ligne, sans envoi.
+- [Fusionner des PDF sur Mac – en quelques secondes, hors ligne](https://sheafai.app/fr/fusionner-pdf-mac): Combinez plusieurs PDF et images en un seul PDF sur Mac, dans l’ordre du Finder, avec un signet par fichier. Hors ligne, originaux intacts.
+- [Signer un PDF sur Mac – sans imprimer, sans compte](https://sheafai.app/fr/signer-pdf-mac): Signez vos PDF sur Mac en quelques secondes : dessinez votre signature une fois et placez-la sur n’importe quelle page. Elle reste sur votre Mac.
+
+### it
+- [Sheaf – Comprimere, unire e firmare PDF su Mac](https://sheafai.app/it/): Comprimi, unisci, dividi, firma, oscura e converti PDF sul Mac, proprio dove li trascini. Tutto resta sul Mac. Prova gratuita di 7 giorni.
+- [Comprimere un PDF su Mac – senza caricarlo, in un secondo](https://sheafai.app/it/comprimere-pdf-mac): Riduci le dimensioni di un PDF sul Mac in circa un secondo, con testo nitido. Anteprima, siti online e Sheaf a confronto. Offline.
+- [Firmare un PDF su Mac – senza stampare, senza account](https://sheafai.app/it/firmare-pdf-mac): Firma PDF sul Mac in pochi secondi: disegna la firma una volta e posizionala su qualsiasi pagina. La firma resta sul tuo Mac.
+- [Unire PDF su Mac – in pochi secondi, offline](https://sheafai.app/it/unire-pdf-mac): Unisci più PDF e immagini in un unico PDF sul Mac, nell’ordine del Finder e con un segnalibro per file. Offline, originali intatti.
+
+### ja
+- [Sheaf – MacでPDFを圧縮・結合・署名](https://sheafai.app/ja/): MacでPDFの圧縮、結合、分割、署名、墨消し、変換を、ドラッグしたその場で。すべてMacの中で完結。7日間無料。
+- [MacでPDFを圧縮する方法 – アップロード不要、約1秒](https://sheafai.app/ja/pdf-asshuku-mac): MacでPDFのファイルサイズを約1秒で小さく。文字はくっきり。プレビュー、オンラインサイト、Sheafを比較。オフラインで動作。
+- [MacでPDFを結合する方法 – 数秒で、オフラインで](https://sheafai.app/ja/pdf-ketsugo-mac): 複数のPDFと画像をMac上で1つのPDFに。Finderでの選択順に、ファイルごとにしおり付き。オフライン、元のファイルはそのまま。
+- [MacでPDFに署名する方法 – 印刷もアカウントも不要](https://sheafai.app/ja/pdf-shomei-mac): MacでPDFに数秒で署名。署名は一度描けば、どのページにも配置できます。署名はMacの中だけに保存されます。
+
+### ko
+- [Sheaf – Mac에서 PDF 압축, 합치기, 서명](https://sheafai.app/ko/): Mac에서 PDF를 압축, 합치기, 나누기, 서명, 가리기, 변환까지 드래그한 자리에서. 모든 처리는 Mac 안에서. 7일 무료 체험.
+- [Mac에서 PDF 압축하는 방법 – 업로드 없이 약 1초](https://sheafai.app/ko/pdf-apchuk-mac): Mac에서 PDF 파일 크기를 약 1초 만에 줄이고 글자는 선명하게. 미리보기, 온라인 사이트, Sheaf 비교. 오프라인 작동.
+- [Mac에서 PDF 합치는 방법 – 몇 초 만에, 오프라인으로](https://sheafai.app/ko/pdf-byeonghap-mac): 여러 PDF와 이미지를 Mac에서 하나의 PDF로. Finder에서 고른 순서대로, 파일마다 책갈피. 오프라인, 원본 그대로.
+- [Mac에서 PDF 서명하는 방법 – 인쇄 없이, 계정 없이](https://sheafai.app/ko/pdf-seomyeong-mac): Mac에서 몇 초 만에 PDF에 서명하세요. 서명은 한 번 그리면 어느 페이지에나 둘 수 있고, Mac 안에만 저장됩니다.
+
+### nl
+- [Sheaf – Pdf comprimeren, samenvoegen en ondertekenen op Mac](https://sheafai.app/nl/): Comprimeer, voeg samen, splits, onderteken, zwart en converteer pdf’s op je Mac, precies waar je ze sleept. Alles blijft op je Mac. 7 dagen gratis.
+- [Pdf comprimeren op Mac – zonder upload, in één seconde](https://sheafai.app/nl/pdf-comprimeren-mac): Maak een pdf kleiner op je Mac in ongeveer een seconde, met scherpe tekst. Voorvertoning, online sites en Sheaf vergeleken. Offline.
+- [Pdf ondertekenen op Mac – zonder printen, zonder account](https://sheafai.app/nl/pdf-ondertekenen-mac): Onderteken pdf’s op je Mac in seconden: teken je handtekening één keer en plaats hem op elke pagina. Hij blijft op je Mac.
+- [Pdf’s samenvoegen op Mac – in seconden, offline](https://sheafai.app/nl/pdf-samenvoegen-mac): Voeg meerdere pdf’s en afbeeldingen samen tot één pdf op je Mac, in Finder-volgorde, met een bladwijzer per bestand. Offline, originelen blijven.
+
+### pt
+- [Sheaf – Comprimir, juntar e assinar PDF no Mac](https://sheafai.app/pt/): Comprima, junte, divida, assine, oculte e converta PDFs no Mac, onde você os arrasta. Tudo fica no Mac. Teste grátis de 7 dias.
+- [Assinar PDF no Mac – sem imprimir, sem conta](https://sheafai.app/pt/assinar-pdf-mac): Assine PDFs no Mac em segundos: desenhe a assinatura uma vez e coloque em qualquer página. Ela fica só no seu Mac.
+- [Comprimir PDF no Mac – sem upload, em um segundo](https://sheafai.app/pt/comprimir-pdf-mac): Reduza o tamanho de um PDF no Mac em cerca de um segundo, com texto nítido. Pré-Visualização, sites online e Sheaf comparados. Offline.
+- [Juntar PDF no Mac – em segundos, offline](https://sheafai.app/pt/juntar-pdf-mac): Junte vários PDFs e imagens em um só PDF no Mac, na ordem do Finder, com um marcador por arquivo. Offline, originais intactos.
+
+### zh-hans
+- [Sheaf – 在 Mac 上压缩、合并、签署 PDF](https://sheafai.app/zh-hans/): 在 Mac 上压缩、合并、拆分、签署、涂黑和转换 PDF，拖动即可完成。所有处理都在 Mac 上进行。免费试用 7 天。
+- [Mac 上合并 PDF 的方法 – 几秒完成，离线可用](https://sheafai.app/zh-hans/pdf-hebing-mac): 在 Mac 上把多个 PDF 和图片合并为一个 PDF，按访达中的顺序，每个文件一个书签。离线可用，原文件不变。
+- [Mac 上签署 PDF 的方法 – 无需打印，无需账户](https://sheafai.app/zh-hans/pdf-qianming-mac): 在 Mac 上几秒内签署 PDF：签名画一次，即可放到任意页面。签名只保存在你的 Mac 上。
+- [Mac 上压缩 PDF 的方法 – 无需上传，约一秒完成](https://sheafai.app/zh-hans/pdf-yasuo-mac): 在 Mac 上约一秒缩小 PDF 文件大小，文字保持清晰。比较预览、在线网站和 Sheaf。离线可用，无需上传。
+
+### zh-hant
+- [Sheaf – 在 Mac 上壓縮、合併、簽署 PDF](https://sheafai.app/zh-hant/): 在 Mac 上壓縮、合併、分割、簽署、塗黑和轉換 PDF，拖移即可完成。所有處理都在 Mac 上進行。免費試用 7 天。
+- [在 Mac 上合併 PDF – 幾秒完成，可離線使用](https://sheafai.app/zh-hant/pdf-hebing-mac): 在 Mac 上把多份 PDF 與圖片合併成一份 PDF，依 Finder 中的順序，每個檔案一個書籤。可離線使用，原始檔不變。
+- [在 Mac 上簽署 PDF – 不必列印，不需帳號](https://sheafai.app/zh-hant/pdf-qianming-mac): 在 Mac 上幾秒內簽署 PDF：簽名畫一次，就能放到任何頁面。簽名只保存在你的 Mac 上。
+- [在 Mac 上壓縮 PDF – 不必上傳，約一秒完成](https://sheafai.app/zh-hant/pdf-yasuo-mac): 在 Mac 上約一秒縮小 PDF 檔案大小，文字保持清晰。比較預覽程式、線上網站與 Sheaf。可離線使用，不必上傳。

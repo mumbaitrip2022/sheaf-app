@@ -18,9 +18,11 @@ jobs:
       deployments: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Collect the site files
-        run: rsync -a --exclude '.git' --exclude '.github' --exclude '.gitignore' --exclude 'README.md' ./ dist/
+        run: rsync -a --exclude '.git' --exclude '.github' --exclude '.gitignore' --exclude 'README.md' --exclude 'functions' --exclude 'indexnow-urls.txt' ./ dist/
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
@@ -28,3 +30,22 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=sheaf --branch=main --commit-dirty=true
+
+      # Tell Bing, Yandex, Seznam and others (IndexNow) which pages changed in this push.
+      - name: Ping IndexNow
+        continue-on-error: true
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          KEY=$(ls | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | cut -d. -f1)
+          if [ -n "$BEFORE" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
+            FILES=$(git diff --name-only "$BEFORE" "$GITHUB_SHA" -- '*.html')
+          else
+            FILES=$(git ls-files '*.html')
+          fi
+          URLS=$(echo "$FILES" | { grep -v '^$' || true; } | sed -E 's#(^|/)index\.html$#\1#; s#\.html$##; s#^#https://sheafai.app/#' | jq -R . | jq -s -c .)
+          [ "$URLS" = "[]" ] && { echo "no pages changed"; exit 0; }
+          sleep 20
+          curl -sS -o /dev/null -w "IndexNow: %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"sheafai.app\",\"key\":\"$KEY\",\"keyLocation\":\"https://sheafai.app/$KEY.txt\",\"urlList\":$URLS}"

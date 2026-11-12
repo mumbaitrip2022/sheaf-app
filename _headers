@@ -13,3 +13,8 @@
 # Keep the preview address out of search results: only sheafai.app should be indexed.
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
+
+# Markdown copies for AI agents: readable, but not indexed as duplicate pages.
+/md/*
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: noindex
