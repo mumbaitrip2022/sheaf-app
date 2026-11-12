@@ -1,0 +1,54 @@
+# Sheaf
+
+> Sheaf is a PDF app for Mac (macOS 14 or later). Start dragging a file, pause, and actions appear around the cursor: compress, merge, split, sign, redact, OCR, convert, PDF to Excel, unlock, Bates numbers and certified copies. Every action runs on the Mac: no uploads, no account. Free 7-day trial on the Mac App Store, then a one-time purchase with Family Sharing. Sheaf for Business is a separate edition for Apple Business Manager.
+
+Key facts:
+- Developer: Vikash Singh. Available only on the Mac App Store: https://apps.apple.com/app/id6830258390
+- Privacy: files never leave the Mac; no servers, no analytics, no account.
+- Languages: English, German, French, Spanish, Japanese, Indonesian.
+- Country-aware: certification wording, ID numbers for unlocking, and upload size presets follow the Mac's region (US, UK, India, Australia, Canada, New Zealand, Singapore, South Africa, UAE, other).
+
+## Everyday PDF tools
+- Compress: Shrinks scans and images, keeps text sharp. Fit 25 MB makes a file small enough to email; Fit 5 MB meets upload forms.
+- Merge: PDFs and images into one PDF, in Finder order, with a bookmark for each file.
+- Split: By page, by page range, or into email-sized parts.
+- Organize: Reorder, rotate and delete pages across several PDFs, then save one clean file.
+- Make searchable (OCR): Turns scanned pages into text you can search, select and copy, on the Mac.
+- Rotate & straighten: Turns sideways pages upright and straightens crooked scans.
+- Sign: Draw your signature once and place it on any page. Kept only on your Mac.
+- Redact: Finds names, emails, phone, card, account and ID numbers, and deletes the text underneath.
+- Protect: Adds a password that's needed to open the PDF.
+- Convert: Word, text and web files to PDF; PDF to JPEG, PNG, Word or text; images to JPEG, PNG, HEIC or AVIF.
+
+## Professional tools
+- PDF to Excel: Bank and card statements become a spreadsheet, every row checked against the running balance. Other tables become one sheet each.
+- Unlock with client details: Opens password-protected statements, payslips and tax forms using the details you saved for each client.
+- Certified true copy: A stamp with your signature, name, membership number and date, in the wording your country uses. UDIN for Indian CAs.
+- Bates numbering: One sequence across every PDF in a production, like ACME000001, continuing from your last production.
+- Page numbers, headers & footers: “Page 1 of 9”, file name or date in any corner. Skip the cover page.
+- Watermark: Confidential, Draft or your own words, drawn into every page.
+- Remove hidden data: Author, edit history, comments, attachments, scripts and hidden layers. Pages look the same.
+- Court-ready: Flattened, searchable, hidden data removed, and under the e-filing size limit, split into parts if needed.
+- Fill forms: Type into a PDF form, then save it or lock the answers into the page.
+- Upload size presets: One tap to fit a portal's limit: 10 MB for IRS and USCIS, 5 MB for India's Income Tax and GST portals or Australia's ATO and myGov.
+
+## Automation and IT
+- Shortcuts: Use Sheaf's actions in the Shortcuts app, including “Convert a bank statement to Excel”.
+- Watched folders: Drop files in a folder and Sheaf compresses, numbers or cleans them on its own.
+- Managed settings: IT can set defaults, hide actions and lock settings with any MDM. Deploy through Apple Business Manager.
+
+## Pages
+- [All features](https://sheafai.app/features.html): full feature list and comparison with Preview and online PDF sites
+- [Law firms](https://sheafai.app/pdf-software-for-law-firms-mac.html): Bates numbering, redaction, metadata removal, court-ready PDFs
+- [Accountants and finance](https://sheafai.app/pdf-software-for-accountants-mac.html): bank statements to Excel, unlocking client statements, certified copies with UDIN, portal upload sizes
+- [HR and payroll](https://sheafai.app/pdf-tools-for-hr-payroll-mac.html): payslips, ID redaction, forms
+- [Real estate](https://sheafai.app/pdf-tools-for-real-estate-mac.html): sign, merge, photos to PDF, email size
+- [Healthcare offices](https://sheafai.app/pdf-tools-for-healthcare-office-mac.html): redacting patient identifiers, searchable scans
+- [Sheaf for Business / IT](https://sheafai.app/business.html): Apple Business Manager, MDM managed settings
+- [Bank statement PDF to Excel on Mac](https://sheafai.app/bank-statement-pdf-to-excel-mac.html)
+- [Open a password-protected PDF on Mac](https://sheafai.app/unlock-password-protected-pdf-mac.html): common password formats by country
+- [Bates numbering on Mac](https://sheafai.app/bates-numbering-mac.html)
+- [Certified true copy wording by country](https://sheafai.app/certified-true-copy-pdf.html)
+- [PDF size limits for government portals](https://sheafai.app/pdf-size-limits-government-portals.html): IRS, USCIS, ATO, myGov, Income Tax, GST, CRA
+- [Compress a PDF on Mac](https://sheafai.app/compress-pdf-mac.html), [Merge](https://sheafai.app/merge-pdf-mac.html), [Sign](https://sheafai.app/sign-pdf-mac.html), [Redact](https://sheafai.app/redact-pdf-mac.html)
+- [Support](https://sheafai.app/support.html), [Privacy policy](https://sheafai.app/privacy.html)

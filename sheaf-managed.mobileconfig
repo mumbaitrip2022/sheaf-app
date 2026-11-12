@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Sample managed settings for Sheaf for Business. Change the values, remove keys you don't need,
+     then upload to your MDM. For the regular Sheaf app use PayloadType com.vikashsingh.sheaf. -->
+<plist version="1.0">
+<dict>
+  <key>PayloadType</key><string>Configuration</string>
+  <key>PayloadVersion</key><integer>1</integer>
+  <key>PayloadIdentifier</key><string>com.example.sheaf-settings</string>
+  <key>PayloadUUID</key><string>6B1F3A52-7C9E-4E0B-9D7A-2F4C1E8B5A01</string>
+  <key>PayloadDisplayName</key><string>Sheaf settings</string>
+  <key>PayloadScope</key><string>System</string>
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>PayloadType</key><string>com.vikashsingh.sheaf.business</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.example.sheaf-settings.app</string>
+      <key>PayloadUUID</key><string>0C9D8E7F-1A2B-4C3D-8E5F-6A7B8C9D0E12</string>
+      <key>PayloadDisplayName</key><string>Sheaf</string>
+      <key>OrganizationName</key><string>Example LLP</string>
+      <key>HiddenActions</key><array><string>protect</string></array>
+      <key>stripMetadata</key><true/>
+      <key>FilingLimitMB</key><integer>35</integer>
+      <key>DefaultWatermarkText</key><string>Privileged &amp; Confidential</string>
+      <key>BatesPrefix</key><string>EXMP</string>
+      <key>DisableReviewPrompts</key><true/>
+    </dict>
+  </array>
+</dict>
+</plist>

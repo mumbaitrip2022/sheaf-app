@@ -541,3 +541,12 @@ button { font: inherit; color: inherit; }
 @keyframes chOut { to { opacity: 0; transform: translateY(-.4em) rotateX(75deg); filter: blur(8px); } }
 .roll-win { transition: width .75s cubic-bezier(.65, 0, .25, 1), color .6s; }
 @media (prefers-reduced-motion: reduce) { .assure .dot::after { animation: none; } .roll-win { transition: none; } }
+/* IT & business page */
+.article table { width: 100%; border-collapse: collapse; margin: 1rem 0 0; font-size: var(--t-small); }
+.article th, .article td { text-align: left; vertical-align: top; padding: .65rem .75rem .65rem 0; border-bottom: 1px solid #ffffff14; color: var(--ink-2); line-height: 1.5; }
+.article th { color: var(--ink); font-weight: 600; }
+.article code { font: .92em ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink); background: #ffffff0f; padding: .1em .35em; border-radius: 6px; }
+.article .tablewrap { overflow-x: auto; }
+.article .feat { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: .75rem; margin-top: 1rem; }
+.article .feat .card { margin: 0; }
+.article .feat b { display: block; margin-bottom: .3rem; }
